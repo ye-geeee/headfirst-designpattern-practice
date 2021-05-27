@@ -8,4 +8,8 @@ abstract class Duck {
     }
 
     abstract void display(); // 모든 오리의 생김새는 다르다
+    
+    void fly() {
+        System.out.println("Duck can fly!");
+    }
 }
