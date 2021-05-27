@@ -1,0 +1,59 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+package client {
+    abstract class Duck {
+       QuackBehavior quackBehavior
+       FlyBehavior flyBehavior
+       swim()
+       display()
+       performQuack()
+       performFly()
+       setFlyBehavior()
+       setQuackBehavior()
+    }
+    class MallardDuck {
+        display()
+    }
+    class RedheadDuck {
+        display()
+    }
+    class RubberDuck {
+        display()
+    }
+    class ModelDuck {
+        display()
+    }
+}
+
+package flybehavior {
+    interface FlyBehavior
+    class FlyWithWings
+    class FlyNoway
+    class FlyRockerPowered
+}
+
+package quackbehavior {
+    interface QuackBehavior
+    class Quack
+    class Squeak
+    class MuteQuack
+}
+
+Duck <|-- MallardDuck
+Duck <|-- RedheadDuck
+Duck <|-- RubberDuck
+Duck <|-- ModelDuck
+
+FlyBehavior <|.. FlyWithWings
+FlyBehavior <|.. FlyNoway
+FlyBehavior <|.. FlyRockerPowered
+
+QuackBehavior <|.. Quack
+QuackBehavior <|.. Squeak
+QuackBehavior <|.. MuteQuack
+
+Duck -> FlyBehavior
+Duck -> QuackBehavior
+
+@enduml

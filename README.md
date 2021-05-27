@@ -5,3 +5,7 @@ This repository is for sample code of [HeadFirst Design Patterns](https://www.am
 ## Contents
 
 [Strategy Pattern](./strategy-pattern)
+
+Compositon over Inheritence
+
+![StrategyPattern](./strategy-pattern/uml/StrategyPattern.png)
