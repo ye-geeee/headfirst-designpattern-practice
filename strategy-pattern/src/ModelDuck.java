@@ -1,12 +1,12 @@
-public class MallardDuck extends Duck {
+public class ModelDuck extends Duck {
 
-    public MallardDuck() {
+    public ModelDuck() {
         quackBehavior = new Quack();
         flyBehavior = new FlyWithWings();
     }
 
     @Override
     void display() {
-        System.out.println("I'm special MallardDuck!");
+        System.out.println("I'm model duck!");
     }
 }

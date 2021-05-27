@@ -3,21 +3,27 @@ public class Main {
         Duck mallardDuck = new MallardDuck();
         Duck redheadDuck = new RedheadDuck();
         Duck rubberDuck = new RubberDuck();
+        Duck modelDuck = new ModelDuck();
 
-        mallardDuck.quack();
         mallardDuck.swim();
         mallardDuck.display();
-        mallardDuck.fly();
+        mallardDuck.performFly();
+        mallardDuck.performQuack();
 
-        redheadDuck.quack();
         redheadDuck.swim();
         redheadDuck.display();
-        redheadDuck.fly();
+        redheadDuck.performFly();
+        redheadDuck.performQuack();
 
-        rubberDuck.quack();
         rubberDuck.swim();
         rubberDuck.display();
-        rubberDuck.fly();
+        rubberDuck.performFly();
+        rubberDuck.performQuack();
 
+        modelDuck.swim();
+        modelDuck.display();
+        modelDuck.setFlyBehavior(new FlyRocketPowered());
+        modelDuck.performFly();
+        modelDuck.performQuack();
     }
 }

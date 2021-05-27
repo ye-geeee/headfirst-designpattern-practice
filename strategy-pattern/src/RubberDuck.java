@@ -1,11 +1,12 @@
 public class RubberDuck extends Duck {
-    @Override
-    void display() {
-        System.out.println("I'm toy rubber duck");
+
+    public RubberDuck() {
+        quackBehavior = new MuteQuack();
+        flyBehavior = new FlyNoWay();
     }
 
     @Override
-    void fly() {
-        System.out.println("Do nothing");
+    void display() {
+        System.out.println("I'm toy rubber duck");
     }
 }
