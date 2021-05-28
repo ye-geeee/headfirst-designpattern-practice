@@ -1,0 +1,42 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Observable {
+    addObserver();
+    deleveObserver();
+    notifyObservers();
+    setChanged();
+}
+
+interface Observer {
+    update();
+}
+
+class WeatherData {
+    getTemperatue();
+    getHumidity();
+    getPressure();
+}
+
+class GeneralDisplay {
+    update();
+    display();
+}
+
+class StatisticsDisplay {
+    update();
+    display();
+}
+
+class ForcastDisplay {
+    update();
+    display();
+}
+
+Observable <|-- WeatherData
+Observable -|> Observer
+Observer <|.. GeneralDisplay
+Observer <|.. StatisticsDisplay
+Observer <|.. ForcastDisplay
+
+@enduml
