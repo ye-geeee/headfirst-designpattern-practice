@@ -1,0 +1,70 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class Beverage {
+    String description
+
+    getDescription()
+    cost()
+}
+
+class HouseBlend {
+    cost()
+}
+
+class DarkRoast {
+    cost()
+}
+
+class Espresso {
+    cost()
+}
+
+class Decaf {
+    cost()
+}
+
+abstract class CondimentDecorator {
+    getDescription()
+}
+
+class Milk {
+    Beverage beverage
+
+    cost()
+    getDescription()
+}
+
+class Mocha {
+    Beverage beverage
+
+    cost()
+    getDescription()
+}
+
+class Soy {
+    Beverage beverage
+
+    cost()
+    getDescription()
+}
+
+class Whip {
+    Beverage beverage
+
+    cost()
+    getDescription()
+}
+
+Beverage <|-- HouseBlend
+Beverage <|-- DarkRoast
+Beverage <|-- Espresso
+Beverage <|-- Decaf
+
+Beverage <|-- CondimentDecorator
+CondimentDecorator <|-- Milk
+CondimentDecorator <|-- Mocha
+CondimentDecorator <|-- Soy
+CondimentDecorator <|-- Whip
+
+@enduml

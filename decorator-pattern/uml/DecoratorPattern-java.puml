@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class InputStream
+class FileInputStream
+class StringBufferInputStream
+class ByteArrayInputStream
+
+abstract class FilterInputStream
+class PushbackInputStream
+class BufferedInputStream
+class DataInputStream
+class LineNumberInputStream
+
+InputStream <|-- FileInputStream
+InputStream <|-- StringBufferInputStream
+InputStream <|-- ByteArrayInputStream
+InputStream <|-- FilterInputStream
+
+FilterInputStream <|-- PushbackInputStream
+FilterInputStream <|-- BufferedInputStream
+FilterInputStream <|-- DataInputStream
+FilterInputStream <|-- LineNumberInputStream
+
+@enduml

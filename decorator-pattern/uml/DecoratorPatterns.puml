@@ -1,0 +1,40 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Component {
+    methodA()
+    methodB()
+}
+
+class ConcreteComponent {
+    methodA()
+    methodB()
+}
+
+class Decorator {
+    methodA()
+    methodB()
+}
+
+class ConcreteDecoratorA {
+    Component wrappedObj;
+
+    methodA()
+    methodB()
+    newBehavior()
+}
+
+class ConcreteDerocatorB {
+    Component wrappedObj;
+    Object newState;
+
+    methodA()
+    methodB()
+}
+
+Component <|-- ConcreteComponent
+Component <|-- Decorator
+Decorator <|-- ConcreteDecoratorA
+Decorator <|-- ConcreteDerocatorB
+
+@enduml
