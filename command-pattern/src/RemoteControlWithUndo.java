@@ -1,9 +1,9 @@
-public class RemoteContolWithUndo {
+public class RemoteControlWithUndo {
     Command[] onCommands;
     Command[] offCommands;
     Command undoCommand;
 
-    public RemoteContolWithUndo() {
+    public RemoteControlWithUndo() {
         onCommands = new Command[7];
         offCommands = new Command[7];
 

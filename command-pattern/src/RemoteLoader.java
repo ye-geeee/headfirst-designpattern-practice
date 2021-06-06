@@ -42,7 +42,7 @@ public class RemoteLoader {
 
 
 
-        RemoteContolWithUndo remoteWithUndo = new RemoteContolWithUndo();
+        RemoteControlWithUndo remoteWithUndo = new RemoteControlWithUndo();
 
         remoteWithUndo.setCommand(0, livingroomLightOn, livingroomLightOff);
         remoteWithUndo.setCommand(1, garageDoorOpen, garageDoorClose);
@@ -66,5 +66,22 @@ public class RemoteLoader {
         remoteWithUndo.onButtonWasPushed(3);
         remoteWithUndo.offButtonWasPushed(3);
         remoteWithUndo.undoButtonWasPushed();
+
+
+
+
+        RemoteControlWithUndo macroRemote = new RemoteControlWithUndo();
+        Command[] onCommands = {livingroomLightOn, stereoOnWithCD, ceilingFanHigh};
+        Command[] offCommands = {livingroomLightOff, stereoOff, ceilingFanOff};
+
+        MacroCommand partyOn = new MacroCommand(onCommands);
+        MacroCommand partyOff = new MacroCommand(offCommands);
+
+        macroRemote.setCommand(0, partyOn, partyOff);
+        System.out.println(macroRemote);
+
+        macroRemote.onButtonWasPushed(0);
+        macroRemote.offButtonWasPushed(0);
+        macroRemote.undoButtonWasPushed();
     }
 }
