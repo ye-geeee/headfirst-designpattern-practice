@@ -38,5 +38,33 @@ public class RemoteLoader {
         remote.offButtonWasPushed(3);
         remote.onButtonWasPushed(4);
         remote.offButtonWasPushed(4);
+
+
+
+
+        RemoteContolWithUndo remoteWithUndo = new RemoteContolWithUndo();
+
+        remoteWithUndo.setCommand(0, livingroomLightOn, livingroomLightOff);
+        remoteWithUndo.setCommand(1, garageDoorOpen, garageDoorClose);
+        remoteWithUndo.setCommand(2, stereoOnWithCD, stereoOff);
+
+        System.out.println(remoteWithUndo);
+
+        remoteWithUndo.onButtonWasPushed(0);
+        remoteWithUndo.offButtonWasPushed(0);
+        remoteWithUndo.undoButtonWasPushed();
+        remoteWithUndo.onButtonWasPushed(1);
+        remoteWithUndo.offButtonWasPushed(1);
+        remoteWithUndo.undoButtonWasPushed();
+        remoteWithUndo.onButtonWasPushed(2);
+        remoteWithUndo.offButtonWasPushed(2);
+        remoteWithUndo.undoButtonWasPushed();
+
+        CeilingFanHighCommand ceilingFanHigh = new CeilingFanHighCommand(ceilingFan);
+        remoteWithUndo.setCommand(3, ceilingFanHigh, ceilingFanOff);
+
+        remoteWithUndo.onButtonWasPushed(3);
+        remoteWithUndo.offButtonWasPushed(3);
+        remoteWithUndo.undoButtonWasPushed();
     }
 }
