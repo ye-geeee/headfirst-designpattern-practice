@@ -34,7 +34,7 @@ class ForcastDisplay {
 }
 
 Observable <|-- WeatherData
-Observable -|> Observer
+Observable -> Observer
 Observer <|.. GeneralDisplay
 Observer <|.. StatisticsDisplay
 Observer <|.. ForcastDisplay

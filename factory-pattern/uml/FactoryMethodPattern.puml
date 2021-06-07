@@ -14,8 +14,8 @@ class ConcreteCreator {
     factoryMethod()
 }
 
-Creator <|-- ConcreteCreator
-ConcreteCreator -|> ConcreteProduct
-Product <|-- ConcreteProduct
+Creator <|.. ConcreteCreator
+ConcreteCreator -> ConcreteProduct
+Product <|.. ConcreteProduct
 
 @enduml
