@@ -1,0 +1,34 @@
+
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client
+
+interface Duck {
+    quack()
+    fly()
+}
+
+interface Turkey {
+    gobble();
+    fly()
+}
+
+class WildTurkey {
+    gobble()
+    fly()
+}
+
+class TurkeyAdapter {
+    turkey
+
+    quack()
+    fly()
+}
+
+Client -> Duck
+Duck <|.. TurkeyAdapter
+Turkey <|.. WildTurkey
+TurkeyAdapter -> WildTurkey
+
+@enduml
