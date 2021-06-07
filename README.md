@@ -2,7 +2,27 @@
 
 This repository is for sample code of [HeadFirst Design Patterns](https://www.amazon.com/Head-First-Design-Patterns-Brain-Friendly/dp/0596007124)
 
+---
+
 ## Contents
+
+[Strategy Pattern](#Strategy-Pattern)
+
+[Observer Pattern](#Observer-Pattern)
+
+[Decorator Pattern](#Decorator-Pattern)
+
+[Factory Pattern](#Factory-Pattern)
+
+[Singleton Pattern](#Singleton-Pattern)
+
+[Command Pattern](#Command-Pattern)
+
+[Adapter Pattern](#Adapter-Pattern)
+
+---
+
+## Strategy Pattern
 
 [Strategy Pattern](./strategy-pattern)
 
@@ -10,13 +30,25 @@ This repository is for sample code of [HeadFirst Design Patterns](https://www.am
 
 ![StrategyPattern](./strategy-pattern/uml/StrategyPattern.png)
 
+---
+
+## Observer Pattern
+
 [Observer Pattern](./observer-pattern)
 
 ![ObserverPattern](./observer-pattern/uml/ObserverPattern.png)
 
+---
+
+## Decorator Pattern
+
 [Decorator Pattern](./decorator-pattern)
 
 ![DecoratorPattern](./decorator-pattern/uml/DecoratorPatterns.png)
+
+---
+
+## Factory Pattern
 
 [Factory Pattern](./factory-pattern)
 
@@ -28,13 +60,25 @@ This repository is for sample code of [HeadFirst Design Patterns](https://www.am
 
 ![AbstractFactoryPattern](./factory-pattern/uml/AbstractFactoryPattern.png)
 
+---
+
+## Singleton Pattern
+
 [Singleton Pattern](./singleton-pattern)
 
 No Image :<
 
+---
+
+## Command Pattern
+
 [Command Pattern](./command-pattern)
 
 ![CommandPattern](./command-pattern/uml/CommandPattern.png)
+
+---
+
+## Adapter Pattern
 
 [Adapter Pattern](./adapter-pattern)
 
