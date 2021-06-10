@@ -20,6 +20,8 @@ This repository is for sample code of [HeadFirst Design Patterns](https://www.am
 
 [Adapter Pattern](#Adapter-Pattern)
 
+[Facade Pattern](#Facade-Pattern)
+
 ---
 
 ## Strategy Pattern
