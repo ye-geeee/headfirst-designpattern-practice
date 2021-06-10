@@ -83,3 +83,11 @@ No Image :<
 [Adapter Pattern](./adapter-pattern)
 
 ![AdapterPattern](./adapter-pattern/uml/AdapterPattern.png)
+
+---
+
+## Facade Pattern
+
+[Facade Pattern](./facade-pattern)
+
+![FacadePattern](./facade-pattern/uml/FacadePatternSample.png)

@@ -1,0 +1,103 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class HomeTheaterFacade {
+    watchMovie()
+    endMovie()
+    listenToCd()
+    endCd()
+    listenToRadio()
+    endRadio()
+}
+
+package {
+    class Amplifier {
+        tuner
+        dvdPlayer
+        cdPlayer
+
+        on()
+        off()
+        setCd()
+        setDvd()
+        setStereoSound()
+        setSurroundSound()
+        setTuner()
+        setVolume()
+    }
+
+    class Tuner {
+        amplifier
+
+        on()
+        off()
+        setAm()
+        setFm()
+        setFrequency()
+    }
+
+    class CdPlayer {
+        amplifier
+
+        on()
+        off()
+        eject()
+        pause()
+        play()
+        stop()
+    }
+
+    class DvdPlayer {
+        amplifier
+
+        on()
+        off()
+        eject()
+        pause()
+        play()
+        setSurroundAudio()
+        setTwoChannelAudio()
+        stop()
+    }
+
+    class Screen {
+        up()
+        down()
+    }
+
+    class PopcornPopper {
+        on()
+        off()
+        pop()
+    }
+
+    class TheaterLights {
+        on()
+        off()
+        dim()
+    }
+
+    class Projector {
+        dvdPlayer
+
+        on()
+        off()
+        tvMode()
+        wideScreenMode()
+    }
+}
+
+HomeTheaterFacade --> Tuner
+HomeTheaterFacade --> Amplifier
+HomeTheaterFacade --> CdPlayer
+HomeTheaterFacade --> DvdPlayer
+HomeTheaterFacade --> Screen
+HomeTheaterFacade --> PopcornPopper
+HomeTheaterFacade --> TheaterLights
+HomeTheaterFacade --> Projector
+
+Amplifier --> Tuner
+Amplifier --> CdPlayer
+Amplifier --> DvdPlayer
+
+@enduml
