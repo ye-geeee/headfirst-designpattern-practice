@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class AbstractClass {
+    templateMethod()
+    abstract primitiveOperation1()
+    abstract primitiveOperation2()
+}
+
+class ConcreteClass {
+    primitiveOperation1()
+    primitiveOperation2()
+}
+
+AbstractClass <|-- ConcreteClass
+
+@enduml
