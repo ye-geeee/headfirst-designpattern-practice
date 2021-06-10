@@ -1,25 +1,13 @@
-public class Tea {
+public class Tea extends CaffeineBeverage {
 
-    void prepareRecipe() {
-        boilWater();
-        steepTeaBag();
-        pourInCup();
-        addLemon();
-    }
-
-    public void boilWater() {
-        System.out.println("boiling water ...");
-    }
-
-    public void steepTeaBag() {
+    @Override
+    void brew() {
         System.out.println("steeping tea bag ...");
     }
 
-    public void pourInCup() {
-        System.out.println("pouring in cup ...");
-    }
-
-    public void addLemon() {
+    @Override
+    void addCondiments() {
         System.out.println("adding lemon ...");
     }
+
 }

@@ -1,25 +1,13 @@
-public class Coffee {
+public class Coffee extends CaffeineBeverage {
 
-    void prepareRecipe() {
-        boilWater();
-        brewCoffeeGrinds();
-        pourInCup();
-        addSugarAndMilk();
-    }
-
-    public void boilWater() {
-        System.out.println("boiling water ...");
-    }
-
-    public void brewCoffeeGrinds() {
+    @Override
+    void brew() {
         System.out.println("brewing coffee ...");
     }
 
-    public void pourInCup() {
-        System.out.println("pouring in cup ...");
-    }
-
-    public void addSugarAndMilk() {
+    @Override
+    void addCondiments() {
         System.out.println("adding sugar and milk ...");
     }
+
 }
