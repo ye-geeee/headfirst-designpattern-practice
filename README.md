@@ -22,6 +22,8 @@ This repository is for sample code of [HeadFirst Design Patterns](https://www.am
 
 [Facade Pattern](#Facade-Pattern)
 
+[Template Method Pattern](#Template-Method-Pattern)
+
 ---
 
 ## Strategy Pattern
@@ -93,3 +95,13 @@ No Image :<
 [Facade Pattern](./facade-pattern)
 
 ![FacadePattern](./facade-pattern/uml/FacadePatternSample.png)
+
+---
+
+## Template Method Pattern
+
+[Template Method Pattern](./templatemethod-pattern)
+
+![TemplateMethodPattern](./templatemethod-pattern/uml/TemplateMethodPattern.png)
+
+---
