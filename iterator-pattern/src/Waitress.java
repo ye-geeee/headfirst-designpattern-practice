@@ -10,17 +10,15 @@ public class Waitress {
     }
 
     public void printMenu() {
-        ArrayList breakfastItems = pancakeHouseMenu.getMenuItems();
-        for (int i = 0; i < breakfastItems.size(); i++) {
-            MenuItem menuItem = (MenuItem) breakfastItems.get(i);
-            System.out.print(menuItem.getName() + " ");
-            System.out.println(menuItem.getPrice() + " ");
-            System.out.println(menuItem.getDescription());
-        }
+        Iterator pancakeIterator = pancakeHouseMenu.createItertor();
+        Iterator dinerIterator = dinerMenu.createIterator();
+        printMenu(pancakeIterator);
+        printMenu(dinerIterator);
+    }
 
-        MenuItem[] lunchItems = dinerMenu.getMenuItems();
-        for (int i = 0; i < dinerMenu.numberOfItems; i++) {
-            MenuItem menuItem = lunchItems[i];
+    public void printMenu(Iterator iterator) {
+        while(iterator.hasNext()) {
+            MenuItem menuItem = (MenuItem) iterator.next();
             System.out.print(menuItem.getName() + " ");
             System.out.println(menuItem.getPrice() + " ");
             System.out.println(menuItem.getDescription());
