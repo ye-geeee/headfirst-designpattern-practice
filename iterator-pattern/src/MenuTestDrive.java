@@ -1,9 +1,15 @@
+import java.util.ArrayList;
+
 public class MenuTestDrive {
     public static void main(String[] args) {
-        PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
-        DinerMenu dinerMenu = new DinerMenu();
+        Menu pancakeHouseMenu = new PancakeHouseMenu();
+        Menu dinerMenu = new DinerMenu();
 
-        Waitress waitress = new Waitress(pancakeHouseMenu, dinerMenu);
+        ArrayList<Menu> menus = new ArrayList<>();
+        menus.add(pancakeHouseMenu);
+        menus.add(dinerMenu);
+
+        Waitress waitress = new Waitress(menus);
         waitress.printMenu();
     }
 }
