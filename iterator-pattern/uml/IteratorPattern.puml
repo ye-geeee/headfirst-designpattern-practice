@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Aggregate {
+    createIterator()
+}
+
+class ConcreteAggregate {
+    createIterator()
+}
+
+class Client
+
+interface Iterator {
+    hasNext()
+    next()
+    remove()
+}
+
+class ConcreteIterator {
+    hasNext()
+    next()
+    remove()
+}
+
+Aggregate <|.. ConcreteAggregate
+Iterator <|.. ConcreteIterator
+
+Aggregate <- Client
+Client -> Iterator
+ConcreteAggregate -> ConcreteIterator
+
+@enduml

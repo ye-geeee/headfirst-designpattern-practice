@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class PancakeHouseMenu {
+    menuItems
+    createIterator()
+}
+
+class DinerMenu {
+    menuItems
+    createIterator()
+}
+
+class Waitress {
+    printMenu()
+}
+
+PancakeHouseMenu <- Waitress
+DinerMenu <- Waitress
+
+interface Iterator {
+    hasNext()
+    next()
+}
+
+class PancakeHouseMenuIterator {
+    hasNext()
+    next()
+}
+
+class DinerMenuIterator {
+    hasNext()
+    next()
+}
+
+Waitress -> Iterator
+Iterator <|.. PancakeHouseMenuIterator
+Iterator <|.. DinerMenuIterator
+
+PancakeHouseMenu -> PancakeHouseMenuIterator
+DinerMenu -> DinerMenuIterator
+
+@enduml
