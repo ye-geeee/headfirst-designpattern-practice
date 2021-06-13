@@ -1,0 +1,41 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Waitress
+
+class MenuComponent {
+    getName()
+    getDescription()
+    getPrice()
+    isVegetarian()
+    print()
+    add(Component)
+    remove(Component)
+    getChild(int)
+}
+
+class MenuItem {
+    getName()
+    getDescription()
+    getPrice()
+    isVegetarian()
+    print()
+}
+
+class Menu {
+    menuComponents
+
+    getName()
+    getDescription()
+    print()
+    add(Component)
+    remove(Component)
+    getChild(int)
+}
+
+Waitress -> MenuComponent
+MenuComponent <|-- MenuItem
+MenuComponent <|-- Menu
+MenuComponent <-- Menu
+
+@enduml
