@@ -1,102 +1,75 @@
 public class GumballMachine {
 
-    final static int SOLD_OUT = 0;
-    final static int NO_QUARTER = 1;
-    final static int HAS_QUARTER = 2;
-    final static int SOLD = 3;
+    State soldOutState;
+    State noQuarterState;
+    State hasQuarterState;
+    State soldState;
 
-    int state = SOLD_OUT;
+    State state = soldOutState;
     int count;
 
     public GumballMachine(int count) {
         this.count = count;
+
+        soldOutState = new SoldOutState(this);
+        noQuarterState = new NoQuarterState(this);
+        hasQuarterState = new HasQuarterState(this);
+        soldState = new SoldState(this);
+
         if (count > 0) {
-            state = NO_QUARTER;
+            state = noQuarterState;
+        }
+    }
+
+    public void setState(State state) {
+        this.state = state;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public State getSoldOutState() {
+        return soldOutState;
+    }
+
+    public State getNoQuarterState() {
+        return noQuarterState;
+    }
+
+    public State getHasQuarterState() {
+        return hasQuarterState;
+    }
+
+    public State getSoldState() {
+        return soldState;
+    }
+
+    public void releaseBall() {
+        System.out.println("A gumball comes rolling out the slot...");
+        if (count != 0) {
+            count = count - 1;
         }
     }
 
     public void insertQuarter() {
-        switch (state) {
-            case SOLD_OUT:
-                System.out.println("SOLD OUT");
-                break;
-            case NO_QUARTER:
-                state = HAS_QUARTER;
-                System.out.println("Inserted quarter");
-                break;
-            case HAS_QUARTER:
-                System.out.println("Please insert only one quarter");
-                break;
-            case SOLD:
-                System.out.println("Please wait for a second. The gumball is going out");
-                break;
-        }
+        state.insertQuarter();
     }
 
     public void ejectQuarter() {
-        switch (state) {
-            case SOLD_OUT:
-                System.out.println("No quarter. Cannot return quarter");
-                break;
-            case NO_QUARTER:
-                System.out.println("Please insert quarter");
-                break;
-            case HAS_QUARTER:
-                state = NO_QUARTER;
-                System.out.println("Returning quarter");
-                break;
-            case SOLD:
-                System.out.println("You already picked the ball");
-                break;
-        }
+        state.ejectQuarter();
     }
 
     public void turnCrank() {
-        switch (state) {
-            case SOLD_OUT:
-                System.out.println("Already sold out");
-                break;
-            case NO_QUARTER:
-                System.out.println("Please insert quarter");
-                break;
-            case HAS_QUARTER:
-                state = SOLD;
-                System.out.println("You turned the crank");
-                dispense();
-                break;
-            case SOLD:
-                System.out.println("Please turn crank once");
-                break;
-        }
+        state.turnCrank();
     }
 
     public void dispense() {
-        switch (state) {
-            case SOLD_OUT:
-                System.out.println("Already sold out");
-                break;
-            case NO_QUARTER:
-                System.out.println("Please insert quarter");
-                break;
-            case HAS_QUARTER:
-                System.out.println("You turned the crank");
-                state = SOLD;
-                break;
-            case SOLD:
-                System.out.println("Gumball is going out");
-                count = count - 1;
-                if (count > 0) {
-                    state = NO_QUARTER;
-                } else {
-                    System.out.println("There is no gumball anymore");
-                    state = SOLD_OUT;
-                }
-                break;
-        }
+        state.dispense();
     }
 
     @Override
     public String toString() {
-        return "state : " + state + " count : " + count;
+        return "state : " + state.toString() + " count : " + count;
     }
 }
