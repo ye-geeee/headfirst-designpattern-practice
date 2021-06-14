@@ -24,6 +24,12 @@ This repository is for sample code of [HeadFirst Design Patterns](https://www.am
 
 [Template Method Pattern](#Template-Method-Pattern)
 
+[Iterator Pattern](#Iterator-Pattern)
+
+[Composite Pattern](#Composite-Pattern)
+
+[State Pattern](#State-Pattern)
+
 ---
 
 ## Strategy Pattern
@@ -103,5 +109,29 @@ No Image :<
 [Template Method Pattern](./templatemethod-pattern)
 
 ![TemplateMethodPattern](./templatemethod-pattern/uml/TemplateMethodPattern.png)
+
+---
+
+## Iterator Pattern
+
+[Iterator Pattern](./iterator-pattern)
+
+![IteratorPattern](./iterator-pattern/uml/IteratorPattern.png)
+
+---
+
+## Composite Pattern
+
+[Composite Pattern](./composite-pattern)
+
+![CompositePattern](./composite-pattern/uml/CompositePattern.png)
+
+---
+
+## State Pattern
+
+[State Pattern](./state-pattern)
+
+![StatePattern](./state-pattern/uml/StatePattern.png)
 
 ---

@@ -1,0 +1,44 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface State {
+    insertQuarter()
+    ejectQuarter()
+    turnCrank()
+    dispense()
+}
+
+class SoldState {
+    insertQuarter()
+    ejectQuarter()
+    turnCrank()
+    dispense()
+}
+
+class SoleOutState {
+    insertQuarter()
+    ejectQuarter()
+    turnCrank()
+    dispense()
+}
+
+class NoQuarterState {
+    insertQuarter()
+    ejectQuarter()
+    turnCrank()
+    dispense()
+}
+
+class HasQuarterState {
+    insertQuarter()
+    ejectQuarter()
+    turnCrank()
+    dispense()
+}
+
+State <|.. SoldState
+State <|.. SoleOutState
+State <|.. NoQuarterState
+State <|.. HasQuarterState
+
+@enduml
