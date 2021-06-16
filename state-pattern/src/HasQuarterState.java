@@ -27,7 +27,6 @@ public class HasQuarterState implements State {
         } else {
             machine.setState(machine.getSoldState());
         }
-        machine.dispense();
     }
 
     @Override

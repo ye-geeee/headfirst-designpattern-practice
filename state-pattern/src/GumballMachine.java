@@ -69,6 +69,7 @@ public class GumballMachine {
 
     public void turnCrank() {
         state.turnCrank();
+        state.dispense();
     }
 
     public void dispense() {
