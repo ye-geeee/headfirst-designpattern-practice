@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Icon {
+    getIconWidth()
+    getIconHeight()
+    paintIcon()
+}
+
+class ImageIcon {
+    getIconWidth()
+    getIconHeight()
+    paintIcon()
+}
+
+class ImageProxy {
+    getIconWidth()
+    getIconHeight()
+    paintIcon()
+}
+
+Icon <|.. ImageIcon
+Icon <|.. ImageProxy
+ImageIcon <- ImageProxy
+
+@enduml
