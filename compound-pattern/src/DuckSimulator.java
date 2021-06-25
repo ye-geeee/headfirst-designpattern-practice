@@ -1,7 +1,7 @@
 public class DuckSimulator {
     public static void main(String[] args) {
         DuckSimulator simulator = new DuckSimulator();
-        AbstractDuckFactory duckFactory = new CountinDuckFactory();
+        AbstractDuckFactory duckFactory = new CountingDuckFactory();
 
         simulator.simulate(duckFactory);
     }

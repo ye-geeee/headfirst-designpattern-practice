@@ -1,4 +1,4 @@
-public class CountinDuckFactory extends AbstractDuckFactory {
+public class CountingDuckFactory extends AbstractDuckFactory {
     @Override
     public Quackable createMallardDuck() {
         return new QuackCounter(new MallardDuck());
