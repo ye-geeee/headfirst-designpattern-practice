@@ -30,6 +30,8 @@ This repository is for sample code of [HeadFirst Design Patterns](https://www.am
 
 [State Pattern](#State-Pattern)
 
+[Compound Pattern](#Compound-Pattern)
+
 ---
 
 ## Strategy Pattern
@@ -133,5 +135,13 @@ No Image :<
 [State Pattern](./state-pattern)
 
 ![StatePattern](./state-pattern/uml/StatePattern.png)
+
+---
+
+## Compound Pattern
+
+[Compound Pattern](./compound-pattern)
+
+![CompoundPattern](./compound-pattern/uml/CompoundPattern.png)
 
 ---

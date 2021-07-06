@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class DJView {
+    controller: Controller
+
+    createView()
+    updateBPM()
+    updateBeat()
+    createControls()
+    enableStopMenuItem()
+    disableStopMenuItem()
+    enableStartMenuItem()
+    disableStartMenuItem()
+    actionPerformed()
+}
+
+interface ControllerInterface {
+    setBPM()
+    increaseBPM()
+    decreaseBPM()
+}
+
+class Controller {
+    setBPM()
+    increaseBPM()
+    decreaseBPM()
+}
+
+DJView -> ControllerInterface
+ControllerInterface <|.. Controller
+
+@enduml
