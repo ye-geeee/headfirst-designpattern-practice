@@ -30,6 +30,8 @@ This repository is for sample code of [HeadFirst Design Patterns](https://www.am
 
 [State Pattern](#State-Pattern)
 
+[Proxy Pattern](#Proxy-Pattern)
+
 [Compound Pattern](#Compound-Pattern)
 
 ---
@@ -135,6 +137,14 @@ No Image :<
 [State Pattern](./state-pattern)
 
 ![StatePattern](./state-pattern/uml/StatePattern.png)
+
+---
+
+## Proxy Pattern
+
+[Proxy Pattern](./proxy-pattern)
+
+![ProxyPattern](./proxy-pattern/uml/ProxyPattern.png)
 
 ---
 
